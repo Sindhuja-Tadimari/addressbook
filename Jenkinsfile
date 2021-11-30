@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Compile') {
             steps { 
-                cmd.exe 'mvn compile'
+                exe 'mvn compile'
             }
         }
         stage('test') {
             steps { 
-                cmd.exe 'mvn test'
+                exe 'mvn test'
             }
         }
         stage('package') {
             steps { 
-                cmd.exe 'mvn package'
+                exe 'mvn package'
             }
         }
     }

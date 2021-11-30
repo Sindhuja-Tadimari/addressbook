@@ -8,12 +8,12 @@ pipeline {
         }
         stage('test') {
             steps { 
-                CMD.EXE'mvn test'
+                powershell 'mvn test'
             }
         }
         stage('package') {
             steps { 
-                CMD.EXE'mvn package'
+                powershell 'mvn package'
             }
         }
     }

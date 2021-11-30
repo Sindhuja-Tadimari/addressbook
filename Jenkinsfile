@@ -14,6 +14,7 @@ pipeline {
         stage('package') {
             steps { 
                 powershell 'mvn package'
+                emailext body: '${BUILD_NUMBER)', subject: 'The build has completed with status as ${BUILD_STATUS}', to: 'tadimarisindhuja@gmail.com'
             }
         }
     }

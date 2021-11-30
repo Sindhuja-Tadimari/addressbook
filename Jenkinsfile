@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps { 
-                CMD.EXE'mvn compile'
+                powershell 'mvn compile'
             }
         }
         stage('test') {
